@@ -3,7 +3,7 @@ import { BrowserRouter as Router } from 'react-router-dom'
 import { Provider } from 'react-redux'
 
 // import store
-// import store from ....
+import store from './public/redux/store'
 
 // import component
 import Header from './movies/Header'
@@ -20,7 +20,7 @@ function App() {
 
 function Root(){
   return(
-    <Provider>
+    <Provider store={store}>
       <Router>
         <App />
       </Router>
