@@ -1,4 +1,9 @@
 import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom'
+import { Provider } from 'react-redux'
+
+// import store
+// import store from ....
 
 // import component
 import Header from './movies/Header'
@@ -10,8 +15,18 @@ function App() {
     <Header title="Movie App by Tama" />
     <Main />
     </>
-  );
+  )
+}
+
+function Root(){
+  return(
+    <Provider>
+      <Router>
+        <App />
+      </Router>
+    </Provider>
+  )
 }
 
 
-export default App;
+export default Root;
